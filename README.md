@@ -1,5 +1,5 @@
 - 👋 Hi, I’m @Alizah
-- 👀 I’m interested in programming languages, algorithms, data structures, software development, artificial intelligence, cybersecurity.
+- 👀 I’m interested in programming languages, algorithms, data structures, software development, artificial intelligence & cybersecurity.
 - 🌱 I’m currently learning Artificial IntelLigence with python.
 - 💞️ I’m looking to collaborate on different programming projects.
 - 📫 How to reach me, Email: alizahhaiderjazan@gmailcom
