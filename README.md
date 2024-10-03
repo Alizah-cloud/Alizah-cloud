@@ -1,5 +1,5 @@
 # 💫 About Me:
-👋 Hi, I’m @Alizah<br>👀 I’m interested in programming languages, algorithms, data structures, software development, artificial intelligence & cybersecurity.<br>🌱 I’m currently learning Artificial Intelligence with python.<br>💞️ I’m looking to collaborate on different programming projects.<br>📫 How to reach me, Email: alizahhaiderjazan@gmailcom<br>😄 Pronouns: She/Her<br>⚡ Fun fact: The First Computer Programmer Was a Woman.
+👋 Hi, I’m @Alizah<br>👀 I’m interested in programming languages, algorithms, data structures, software development, artificial intelligence & cybersecurity.<br>🌱 I’m currently learning Artificial Intelligence with python.<br>💞️ I’m looking to collaborate on different programming projects.<br>📫 How to reach me, Email: alizahhaiderjazan@gmail.com<br>😄 Pronouns: She/Her<br>⚡ Fun fact: The First Computer Programmer Was a Woman.
 
 
 ## 🌐 Socials:
