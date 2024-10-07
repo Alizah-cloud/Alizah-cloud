@@ -1,10 +1,114 @@
-<style>
-    .subscribe-button {
-        background-color: rgb(186, 6, 6);
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <style>
+    /* Style for the fixed sidebar */
+    .sidebar {
+      position: fixed;
+      width: 20%;
+      height: 100vh;
+      background-color: #000;
+      color: white;
+      padding: 20px;
+    }
 
-}
+    /* Right side content */
+    .main-content {
+        background-color: #000;
+        color: aliceblue;
+        margin-left: 25%;
+        padding: 20px;
+    }
 
+    /* General styling for the navigation bar */
+    .nav-bar {
+      margin-top: 20px;
+    }
 
-</style>
+    .nav-bar a {
+      display: block;
+      color: rgb(0, 0, 0);
+      text-decoration: none;
+      padding: 10px;
+      margin-bottom: 10px;
+      background-color: #00bfff;
+      border-radius: 5px;
+    }
 
-<button class="subscribe-button" SUBSCRIBE></button>
+    .nav-bar a:hover {
+      background-color: #007acc;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Left side - Fixed Sidebar -->
+  <div class="sidebar">
+    <img src="your-photo.png" alt="Your Photo" style="width: 100%; border-radius: 50%;">
+    <h2>Your Name</h2>
+    <p>Software Engineer & Data Scientist</p>
+    
+    <!-- Social links (optional) -->
+    <div class="social-links">
+      <a href="https://github.com/Alizah-cloud" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/your-profile" target="_blank">LinkedIn</a>
+    </div>
+    
+    <!-- Navigation Bar -->
+    <div class="nav-bar">
+      <a href="#" onclick="loadContent('home')">Home</a>
+      <a href="#" onclick="loadContent('about')">About Me</a>
+      <a href="#" onclick="loadContent('projects')">Projects</a>
+      <a href="#" onclick="loadContent('contact')">Contact</a>
+    </div>
+  </div>
+
+  <!-- Right side - Dynamic Content -->
+  <div class="main-content" id="content">
+    <h1>Welcome to My Portfolio</h1>
+    <p>This is where content will change dynamically based on navigation.</p>
+  </div>
+
+  <script>
+    // JavaScript to load dynamic content
+    function loadContent(page) {
+      const contentDiv = document.getElementById('content');
+      
+      switch (page) {
+        case 'home':
+          contentDiv.innerHTML = '<h1>Home</h1><p>Welcome to my homepage!</p>';
+          break;
+        case 'about':
+          contentDiv.innerHTML = '<h1>About Me</h1><p>Details about who I am and what I do.</p>';
+          break;
+        case 'projects':
+          contentDiv.innerHTML = '<h1>Projects</h1><p>Showcase of my key coding projects.</p>';
+          break;
+        case 'contact':
+          contentDiv.innerHTML = `
+            <h1>Contact Me</h1>
+            <form action="submit_form.php" method="POST">
+              <label for="name">Your Name:</label><br>
+              <input type="text" id="name" name="name" required><br><br>
+
+              <label for="email">Your Email:</label><br>
+              <input type="email" id="email" name="email" required><br><br>
+
+              <label for="message">Your Message:</label><br>
+              <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+              <input type="submit" value="Send Message">
+            </form>
+          `;
+          break;
+        default:
+          contentDiv.innerHTML = '<h1>Welcome to My Portfolio</h1>';
+      }
+    }
+  </script>
+
+</body>
+</html>
