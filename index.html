@@ -47,12 +47,14 @@
       z-index: 10; 
       background-color: rgba(0, 0, 0, 0.6);
       }
+
       .navbar {
         position: fixed;
         top: 90px; 
         top: 90px; 
         display: flex;
         gap: 15px;
+        font-weight: bold;
         position: absolute;
         left: 50%; 
         transform: translate(-50%, -50%);
@@ -61,6 +63,11 @@
         z-index: 10;
     }
 
+    .navbar a {
+      text-decoration: none;
+      color: white;         
+    }
+  
     .navbar li {
         padding: 8px 12px; 
         border: 2px solid white;
@@ -82,9 +89,9 @@
       <body>
         <div class="sidebar">
           <img src="image1.png" alt="Your Photo" style="width: 50%; border-radius: 50%; margin-left: 57px; margin-left: 70;">
-          <h2 style="margin-top: 25px; justify-content: center; align-items: center;">&nbsp;Alizah Haider</h2>
+          <h2 style="margin-top: 25px; justify-content: center; align-items: center; margin-left: 10px;">Alizah Haider</h2>
           <p style= "font-size: 19px; margin-top: 25px; margin-left: 28px">
-          Software Engineer & &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Data Scientist</p>
+          Software Engineer & <span style="margin-left: 23px;">Data</span>Scientist</p>
           
           <div class="social-links">
             <a href="https://github.com/Alizah-cloud/AlizahAndCode" class="button" target="_blank">
@@ -103,19 +110,30 @@
 
         <ul class="navbar">
           <li>
-            <a href="#home">
-              <img src="home.png" alt="Home Logo" style="width: 20px; height: 20px; margin-right: 5px;"> 
+            <a href="home.html">
+              <img src="home.png" alt="Home Logo"  style="width: 30px; height: 30px; margin-right: 4px;"> 
               Home
+          </a>
+          </li>
+
+          <li>
+            <a href="about.html">
+              <img src="about.png" alt="about Logo"  style="width: 30px; height: 30px; margin-right: 4px;"> 
+              About Me
+          </a>
+          </li>
+
+          <li>
+            <a href="projects.html">
+              <img src="Projects.png" alt="Project Logo"  style="width: 30px; height: 30px; margin-right: 4px;"> 
+              Projects
             </a>
           </li>
+
           <li>
-            <a href="#about">About</a>
-          </li>
-          <li>
-            <a href="#projects">Projects</a>
-          </li>
-          <li>
-            <a href="#contact">Contact</a>
+            <a href="contact.html">
+              <img src="Contact.png" alt="Contact Me Logo"  style="width: 30px; height: 30px; margin-right: 4px;"> 
+              Contact Me</a>
           </li>
         </ul>
                 
