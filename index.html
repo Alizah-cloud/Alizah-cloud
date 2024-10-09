@@ -7,6 +7,14 @@
   <title>My Portfolio Website</title>
 
     <style>
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        height: 100%;
+      }
+
       .video-background {
         position: fixed;
         top: 0;
@@ -79,6 +87,17 @@
     .navbar li:hover {
         background-color: rgba(255, 255, 255, 0.4);
     }
+
+    .content {
+      display: none; /* Hide all content initially */
+      color: white;
+      margin-top: 20px;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+
     </style>
     </head>
     
@@ -107,33 +126,62 @@
 
         <ul class="navbar">
           <li>
-            <a href="home.html">
+            <a href="#" onclick="showContent('home-content')">
               <img src="home.png" alt="Home Logo"  style="width: 30px; height: 30px; margin-right: 4px;"> 
               Home
           </a>
           </li>
 
           <li>
-            <a href="about.html">
+            <a href="#" onclick="showContent('about-content')">
               <img src="about.png" alt="about Logo"  style="width: 30px; height: 30px; margin-right: 4px;"> 
               About Me
           </a>
           </li>
 
           <li>
-            <a href="Tech-Stack.html">
+            <a href="#" onclick="showContent('Tech-content')">
               <img src="Tech-Stack.png" alt="Tech Stack Logo"  style="width: 30px; height: 30px; margin-right: 4px;"> 
               Tech Stack
             </a>
           </li>
 
           <li>
-            <a href="contact.html">
+            <a href="#" onclick="showContent('contact-content')">
               <img src="Contact.png" alt="Contact Me Logo"  style="width: 30px; height: 30px; margin-right: 4px;"> 
               Contact Me</a>
           </li>
         </ul>
-                
+        
+        <div id="home-content" class="content">
+          <h2>Home</h2>
+          <p>Welcome to the home page!</p>
+        </div>
+
+        <div id="about-content" class="content">
+          <h2>About</h2>
+          <p>Learn more about us on this page.</p>
+        </div>
+
+        <div id="Tech-content" class="content">
+          <h2>Tech Stack</h2>
+          <p>This is the content for the Projects section.</p>
+        </div>
+
+        <div id="contact-content" class="content">
+          <h2>Contact</h2>
+          <p>Get in touch with us here.</p>
+        </div>
+
+        <script>
+          function showContent(contentId) {
+            var contents = document.querySelectorAll('.content');
+            contents.forEach(function(content) {
+              content.style.display = 'none';
+            });
+            document.getElementById(contentId).style.display = 'block';
+          }
+        </script>
 
       </body>
     </html>
