@@ -12,7 +12,8 @@
         margin: 0;
         padding: 0;
         font-family: Arial, sans-serif;
-        height: 100%;
+        height: auto;
+        overflow-y: visible;
       }
 
       .video-background {
@@ -30,8 +31,7 @@
         padding: 10px 20px;
         margin-top: 10px;
         margin-bottom: 10px;
-        margin-left: 57px;
-        margin-left: 40px;
+        margin-left: 30px;
         border: none;
         border-radius: 50px;
         text-decoration: none;
@@ -60,7 +60,7 @@
         position: fixed;
         top: 90px;
         display: flex;
-        gap: 15px;
+        gap: 13px;
         font-weight: bold;
         left:53%; 
         transform: translate(-50%, -50%);
@@ -89,14 +89,20 @@
     }
 
     .content {
-      display: none; /* Hide all content initially */
-      color: white;
-      margin-top: 20px;
-      background-color: rgba(0, 0, 0, 0.8);
+      position: fixed;
+      display: none; 
+      color: black;
+      margin-top: 160px; 
+      margin-left: 28%; 
+      margin-right: 50px; 
+      max-height: 75vh;
+      background-color: rgba(255, 255, 255, 0.8);
       padding: 20px;
       border-radius: 10px;
+      overflow-y: scroll; /* Ensure the content inside the box scrolls */
+      box-sizing: border-box; 
+      z-index: 10;
     }
-
 
     </style>
     </head>
@@ -155,7 +161,15 @@
         
         <div id="home-content" class="content">
           <h2>Home</h2>
-          <p>Welcome to the home page!</p>
+          <p>Artificial Intelligence (AI) is a branch of computer science that focuses on creating machines capable of performing tasks that typically require human intelligence. This includes a wide range of capabilities, from simple activities like recognizing patterns in data to complex actions like learning, reasoning, and problem-solving. AI systems can process large amounts of data quickly, identify patterns, and make decisions based on those patterns. This allows AI to excel in fields such as natural language processing, robotics, computer vision, and more.
+
+            One of the key aspects of AI is its ability to learn from data, a process known as machine learning (ML). Instead of being explicitly programmed to perform tasks, ML algorithms allow machines to learn and improve from experience. This makes AI incredibly versatile, capable of adapting to new situations and improving over time. For example, AI systems can be trained to recognize faces, detect fraud, recommend products, or even drive cars autonomously.
+            
+            AI's impact on industries is profound. In healthcare, AI is used for diagnosing diseases, personalizing treatment plans, and even assisting in surgeries with robotic precision. In finance, AI helps in fraud detection, algorithmic trading, and customer service automation. Manufacturing has seen the rise of AI-powered robots that enhance production efficiency and quality control. In education, AI-powered systems provide personalized learning experiences and automate administrative tasks.
+            
+            Despite the advancements, AI raises important ethical and societal questions. The potential for AI to replace human jobs is a significant concern, particularly in sectors like manufacturing and customer service. There's also the issue of bias in AI systems, as these systems can sometimes perpetuate the biases present in the data they are trained on. Furthermore, AI systems can be used for malicious purposes, such as developing deepfakes or automating cyber-attacks. Therefore, it is crucial to establish ethical guidelines and regulatory frameworks to ensure AI is used responsibly.
+            
+            AI is evolving rapidly, and its potential seems limitless. From self-driving cars to virtual assistants, AI is gradually becoming an integral part of everyday life. While AI has already achieved remarkable feats, it is still in its infancy in many ways. The field continues to advance, with researchers exploring new ways to make AI more efficient, transparent, and safe for widespread use. The future of AI holds promise in making human lives better, but it also requires careful consideration of the challenges and risks associated with its growing influence on society.!</p>
         </div>
 
         <div id="about-content" class="content">
@@ -181,6 +195,13 @@
             });
             document.getElementById(contentId).style.display = 'block';
           }
+          window.addEventListener('click', function(e) {
+            const contentBox = document.querySelector('.content');
+            if (!contentBox.contains(e.target)) {
+              contentBox.classList.remove('open-content');
+              document.body.style.overflow = '';  // Enable background scroll again
+            }
+          });
         </script>
 
       </body>
